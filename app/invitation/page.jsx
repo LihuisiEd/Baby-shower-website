@@ -51,10 +51,10 @@ export default function Invitation() {
                             className="lg:h-full lg:w-full"
                         />
                     </div>
-                    <div className="col-span-1 md:col-span-3 bg-amber-100 p-10 m-0 md:m-0 rounded-3xl lg:rounded-full w-72 md:w-full text-3xl md:text-4xl">
+                    <div className="col-span-1 md:col-span-3 text-brown bg-amber-100 p-10 m-0 md:m-0 rounded-3xl lg:rounded-full w-72 md:w-full text-3xl md:text-4xl">
                         Estamos muy emocionados por nuestro pequeño.
                     </div>
-                    <div className="col-span-1 md:col-span-3 bg-sky-100 p-10 m-0 md:m-0 rounded-3xl lg:rounded-full w-72 md:w-full text-3xl md:text-4xl">
+                    <div className="col-span-1 md:col-span-3 text-blue bg-sky-100 p-10 m-0 md:m-0 rounded-3xl lg:rounded-full w-72 md:w-full text-3xl md:text-4xl">
                         Ven a darle la bienvenida a este mundo
                     </div>
                     <div className="hidden md:block lg:col-span-1 bg-sky-100 justify-self-center p-6  rounded-full">
