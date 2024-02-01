@@ -10,8 +10,6 @@ const caveat = Caveat({
 
 
 export const metadata = {
-  title: "Baby Shower",
-  description: "Invitacion a baby shower de Thomas",
   openGraph: {
     title: 'Baby Shower',
     description: 'Invitacion a baby shower de Thomas',
@@ -22,12 +20,6 @@ export const metadata = {
         url: 'https://github.com/LihuisiEd/Baby-shower-website/blob/main/public/graficos/baby-thomas.png', // Must be an absolute URL
         width: 800,
         height: 600,
-      },
-      {
-        url: 'https://github.com/LihuisiEd/Baby-shower-website/blob/main/public/graficos/baby-thomas.png', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
       },
     ],
     locale: 'en_US',
