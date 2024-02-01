@@ -12,6 +12,27 @@ const caveat = Caveat({
 export const metadata = {
   title: "Baby Shower",
   description: "Invitacion a baby shower de Thomas",
+  openGraph: {
+    title: 'Baby Shower',
+    description: 'Invitacion a baby shower de Thomas',
+    url: 'https://baby-shower-two.vercel.app/',
+    siteName: 'Baby Shower',
+    images: [
+      {
+        url: 'https://github.com/LihuisiEd/Baby-shower-website/blob/main/public/graficos/baby-thomas.png', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://github.com/LihuisiEd/Baby-shower-website/blob/main/public/graficos/baby-thomas.png', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -19,10 +40,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={caveat.className}>
         <main className="bg-white relative h-screen w-screen flex justify-center">
-          
-          <AudioPlayer src={'music/cancion.mp3'}/>
+
+          <AudioPlayer src={'music/cancion.mp3'} />
           {children}
-          <NavBar/>
+          <NavBar />
         </main>
       </body>
     </html>
