@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={caveat.className}>
         <main className="bg-white relative h-screen w-screen flex justify-center">
           
-          <AudioPlayer src={'music/en-mi-corazon.mp3'}/>
+          <AudioPlayer src={'music/cancion.mp3'}/>
           {children}
           <NavBar/>
         </main>
