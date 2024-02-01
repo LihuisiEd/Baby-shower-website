@@ -10,21 +10,8 @@ const caveat = Caveat({
 
 
 export const metadata = {
-  openGraph: {
-    title: 'Baby Shower',
-    description: 'Invitacion a baby shower de Thomas',
-    url: 'https://baby-shower-two.vercel.app/',
-    siteName: 'Baby Shower',
-    images: [
-      {
-        url: 'https://github.com/LihuisiEd/Baby-shower-website/blob/main/public/graficos/baby-thomas.png', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
+  title: "Baby Shower",
+  description: "Invitacion a baby shower de Thomas",
 };
 
 export default function RootLayout({ children }) {
