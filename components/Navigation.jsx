@@ -13,7 +13,7 @@ export default function NavBar() {
                 delay: 2,
             }}
             exit={{ opacity: 0 }}
-            className="container mx-auto absolute bottom-0 grid grid-cols-3 divide-x-2 w-screen rounded-t-3xl text-white bg-brown text-center"
+            className="container mx-auto absolute bottom-0 grid grid-cols-3 divide-x-2 divide-amber-100 w-screen rounded-t-3xl text-white bg-brown text-center"
         >
             <Link href="/" className="text-3xl lg:text-5xl w-full transition duration-200 ">
                 <div className=" font-bold p-3 lg:p-6">
