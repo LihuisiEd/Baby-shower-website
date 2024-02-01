@@ -18,11 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={caveat.className}>
-        <div className="bg-white relative h-screen w-screen flex justify-center">
-          <NavBar/>
+        <main className="bg-white relative h-screen w-screen flex justify-center">
+          
           <AudioPlayer src={'music/en-mi-corazon.mp3'}/>
           {children}
-        </div>
+          <NavBar/>
+        </main>
       </body>
     </html>
   );

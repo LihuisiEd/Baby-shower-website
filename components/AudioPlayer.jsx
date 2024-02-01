@@ -5,7 +5,6 @@ import { Howl } from 'howler';
 const AudioPlayer = ({ src }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [sound, setSound] = useState(null);
-
     useEffect(() => {
         const newSound = new Howl({
             src: [src],
@@ -19,14 +18,7 @@ const AudioPlayer = ({ src }) => {
 
         setSound(newSound);
 
-        // Iniciar la reproducción después de un segundo
-        const playAfterDelay = setTimeout(() => {
-            newSound.play();
-            setIsPlaying(true);
-        }, 1000);
-
         return () => {
-            clearTimeout(playAfterDelay);
             newSound.unload();
         };
     }, [src]);
@@ -39,19 +31,20 @@ const AudioPlayer = ({ src }) => {
             setIsPlaying(true);
             sound.play();
         }
-
         setIsPlaying(!isPlaying);
     };
 
     return (
-        <div>
-            <button onClick={togglePlayPause} className='absolute top-0 right-0 buttons-navigation  mt-6 mr-6 text-brown'>
-                {isPlaying ? <svg xmlns="http://www.w3.org/2000/svg" className='size-12 md:size-20 p-2 md:p-4' fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />
+        <div className='z-50'>
+            <button onClick={togglePlayPause} className='absolute top-0 right-0 bg-white rounded-full motion-safe:animate-bounce shadow-xl shadow-amber-600/10  focus:animate-none mt-6 mr-6 p-4 text-brown'>
+                {isPlaying ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
                 </svg>
-                    : <svg xmlns="http://www.w3.org/2000/svg" fill="none" className='size-12 md:size-20 p-2 md:p-4' viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+
+                    : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-zinc-400">
+                        <path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z" clip-rule="evenodd" />
                     </svg>
+
                 }
             </button>
         </div>
